@@ -1,5 +1,11 @@
 "use strict";
 
+let splide = new Splide(".splide", {
+  type: "loop",
+});
+
+splide.mount();
+
 let cleave = new Cleave("#user_phone", {
   phone: true,
   phoneRegionCode: "RU",
