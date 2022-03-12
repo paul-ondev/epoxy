@@ -157,14 +157,13 @@ footer {
 }
 
 .who-we {
-  height: 678px;
   padding-top: 63px;
   padding-bottom: 100px;
 }
 
 .post-wrap {
   display: flex;
-  gap: 72px;
+  gap: 45px;
 }
 
 .post__poster {
@@ -179,6 +178,15 @@ footer {
   font-weight: 500;
   font-size: 24px;
 }
+
+.consult {
+  border: 4px solid orange;
+  border-radius: 20px;
+}
+
+.restoration {
+  background-color: #0bc0f7bb;
+}
 /* Slider*/
 .sligerContainer {
   padding-top: 30px;
@@ -187,7 +195,7 @@ footer {
   margin: 0 auto;
 }
 .sliderImage {
-  height: 560px;
+  height: 590px;
   width: 100%;
 }
 
@@ -326,7 +334,7 @@ footer {
 
 .footer {
   padding-top: 94px;
-  padding-bottom: 194px;
+  padding-bottom: 80px;
 }
 
 .contacts-wrap {
@@ -462,4 +470,14 @@ footer {
   height: 50px;
   width: 100%;
   padding-top: 20px;
+}
+
+.footerLogo {
+  padding-top: 40px;
+  display: flex;
+  justify-content: center;
+}
+.footerLogo img {
+  width: 100px;
+  height: 100px;
 }
