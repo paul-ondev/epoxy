@@ -26,7 +26,7 @@ function submitEmailSending(userNameVal, userPhoneVal) {
     user_phone: userPhoneVal,
   };
 
-  emailjs.send("service_xzlt19l", "template_rwwsltr", templateParams).then(
+  emailjs.send("service_cn3paqm", "template_fuc9kdi", templateParams).then(
     function (response) {
       errorBox.innerText = "Заявка отправлена! Спасибо.";
       console.log("SUCCESS!", response.status, response.text);
