@@ -31,6 +31,7 @@
 :root {
   --pretty-black: #333333;
   --dark-grey: #4a4a4a;
+  --light-grey: #cacaca;
   --grey: #5f5f5f;
   --blue: #ace9fe;
   --light-blue: #e4f8ff;
@@ -46,7 +47,7 @@
 }
 
 .bg-gray {
-  background-color: #4f5f662a;
+  background-color: var(--light-grey);
 }
 
 * {
@@ -385,151 +386,52 @@ footer {
 }
 
 .button {
+  color: var(--light-brown);
   display: inline-block;
   background-color: orange;
   border-radius: 30px;
-  padding: 10px 20px;
+  padding: 13px 20px;
   min-width: 100px;
   text-align: center;
   cursor: pointer;
   transition: background-color 0.2ms ease-in-out, border-color 0.2ms ease-in-out;
   border: 1px solid transparent;
 }
-.button,
-.button span {
-  color: #fff;
-}
-.button i,
-.button span,
-.button path,
-.button svg {
-  transition: all 0.2ms ease-in-out;
-}
 .button:hover {
   background-color: #d68b00;
 }
 .button:disabled {
-  border-color: #cacaca;
-  color: #cacaca;
+  border-color: var(--grey);
+  background-color: var(--light-grey);
+  color: var(--grey);
 }
 .button:disabled:hover {
-  color: #cacaca;
-  background-color: #fff;
   cursor: default;
 }
 .button:active {
   background-color: #c27d00;
   transform: translateY(1px);
 }
-.button--transparent {
-  background: #fff;
-  border: 1px solid #cacaca;
-  color: #cacaca;
+.button-form {
+  align-self: flex-end;
 }
-.button--transparent:hover {
-  background-color: #b3b3b3;
-  color: #fff;
-}
-.button--transparent:active {
-  background-color: #8c8c8c;
-  color: #fff;
-}
-.button--circle {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  width: 32px;
-  height: 32px;
-  min-width: 32px;
-  padding: 0;
-  border-width: 2px;
-}
-.button--black {
-  background-color: black;
-}
-.button--black:hover,
-.button--black:active {
-  background-color: #1a1a1a;
-}
-.button--outline {
-  background-color: #fff;
-  border-color: orange;
-}
-.button--outline,
-.button--outline span {
-  color: orange;
-}
-.button--outline svg path {
-  fill: orange;
-}
-.button--outline:hover {
-  background-color: orange;
-}
-.button--outline:hover,
-.button--outline:hover span {
-  color: #fff;
-}
-.button--outline:hover svg path {
-  fill: #fff;
-}
-.button--outline:active {
-  background-color: #d68b00;
-}
-.button--add svg {
-  margin-right: 2px;
-}
-.button--add span {
-  font-weight: 600;
-  font-size: 16px;
-}
-.button--add:hover i {
-  background-color: #fff;
-  color: orange;
-}
-.button--add i {
-  display: inline-block;
-  border-radius: 30px;
-  background-color: orange;
-  color: #fff;
-  font-weight: 600;
-  width: 22px;
-  height: 22px;
-  font-style: normal;
-  font-size: 13px;
-  line-height: 22px;
-  position: relative;
-  top: -1px;
-  left: 3px;
-  text-align: center;
-}
-.button--cart {
-  display: flex;
-  align-items: center;
-  line-height: 23px;
-  padding: 12px 25px;
-}
-.button--cart svg {
-  margin-right: 8px;
-  margin-bottom: 1px;
-}
-.button--cart span {
-  font-weight: 600;
-  font-size: 16px;
-}
-.line {
-  width: 1px;
-  height: 25px;
-  background: rgba(255, 255, 255, 0.25);
-  margin: 0 13px;
-}
+
 /* input */
+.feedbackForm {
+  padding-top: 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 70%;
+}
+
 .textInput {
   display: flex;
   flex-direction: column;
 }
 .textInput__input {
   height: 2rem;
-  border: 1px solid #878a8ca6;
+  border: 1px solid var(--grey);
   border-radius: 0.2rem;
   font-family: inherit;
   font-size: inherit;
@@ -547,10 +449,14 @@ footer {
 }
 .textInput__label {
   padding-bottom: 10px;
-  color: #526371;
+  color: var(--grey);
   cursor: text;
 }
-
 .textInput__input:focus ~ .textInput__label {
   color: darkslateblue;
+}
+#errors {
+  height: 50px;
+  width: 100%;
+  padding-top: 20px;
 }
